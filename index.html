@@ -1,0 +1,309 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zynko | Downloads</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #050505;
+  color: white;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* BLACK AND WHITE BACKGROUND */
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 20%, #292929, transparent 55%),
+    radial-gradient(circle at 80% 80%, #222, transparent 55%),
+    #050505;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 25%,
+    #ffffff18 50%,
+    transparent 75%
+  );
+  animation: flashes 10s infinite;
+}
+
+@keyframes flashes {
+  0%, 14%, 17%, 49%, 52%, 100% {
+    opacity: 0;
+  }
+  15%, 50% {
+    opacity: .8;
+  }
+}
+
+/* FLOATING DECORATIONS */
+.decorations {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.float {
+  position: absolute;
+  object-fit: contain;
+  opacity: .4;
+  filter: grayscale(100%);
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(5deg);
+  }
+}
+
+.bike {
+  width: 170px;
+  top: 8%;
+  right: -40px;
+}
+
+.ghost {
+  width: 100px;
+  top: 30%;
+  left: -25px;
+  animation-delay: -2s;
+}
+
+.pixel {
+  width: 125px;
+  top: 55%;
+  right: -40px;
+  animation-delay: -3s;
+}
+
+.star {
+  width: 100px;
+  bottom: 18%;
+  left: -20px;
+  animation-delay: -1s;
+}
+
+.gengar {
+  width: 110px;
+  bottom: 5%;
+  right: -20px;
+  animation-delay: -4s;
+}
+
+/* MAIN WEBSITE */
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  margin: auto;
+  padding: 35px 20px;
+}
+
+.profile {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.avatar {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #aaa;
+  box-shadow: 0 0 35px #ffffff35;
+  animation: float 6s ease-in-out infinite;
+}
+
+h1 {
+  font-size: 35px;
+  letter-spacing: 5px;
+  margin: 20px 0 8px;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.section {
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin: 35px 0 18px;
+}
+
+/* DOWNLOAD CARDS */
+.card {
+  background: #141414e8;
+  border: 1px solid #555;
+  border-radius: 17px;
+  padding: 25px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 12px 35px #0009;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin: 12px 0;
+}
+
+.tag {
+  color: #aaa;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.description {
+  color: #999;
+  font-size: 14px;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  background: white;
+  color: black;
+  padding: 15px;
+  margin-top: 22px;
+  border-radius: 9px;
+  font-weight: bold;
+  transition: .25s;
+}
+
+.button:hover {
+  background: #bbb;
+  transform: scale(1.02);
+}
+
+.social {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border: 1px solid #555;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin-top: 18px;
+  background: #151515cc;
+}
+
+footer {
+  color: #777;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin: 65px 0 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float,
+  .avatar,
+  .background::after {
+    animation: none;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<!-- FLOATING BACKGROUND IMAGES -->
+<div class="decorations">
+  <img class="float bike" src="bike.jpeg" alt="">
+  <img class="float ghost" src="ghost.jpeg" alt="">
+  <img class="float pixel" src="pixel.jpeg" alt="">
+  <img class="float star" src="star.jpeg" alt="">
+  <img class="float gengar" src="gengar.jpeg" alt="">
+</div>
+
+<div class="container">
+
+  <div class="profile">
+
+    <img class="avatar"
+         src="pfp.jpeg"
+         alt="Zynko GTAG PFP">
+
+    <h1>ZYNKO</h1>
+
+    <p class="subtitle">
+      OFFICIAL DOWNLOAD CENTER
+    </p>
+
+    <a class="social"
+       href="https://www.tiktok.com/@zynko_bckup"
+       target="_blank"
+       rel="noopener noreferrer">
+       TIKTOK PROFILE
+    </a>
+
+  </div>
+
+  <p class="section">AVAILABLE DOWNLOADS</p>
+
+  <div class="card">
+
+    <p class="tag">ANDROID APPLICATION</p>
+
+    <h2>DeltaV67</h2>
+
+    <p class="description">
+      Version 67 • APK
+    </p>
+
+    <a class="button"
+       href="https://github.com/brodezz66-create/Downloads./releases/latest">
+       DOWNLOAD
+    </a>
+
+  </div>
+
+  <div class="card">
+
+    <p class="tag">COMING SOON</p>
+
+    <h2>More Downloads</h2>
+
+    <p class="description">
+      New downloads and updates will appear here.
+    </p>
+
+  </div>
+
+  <footer>
+    ZYNKO © 2026
+  </footer>
+
+</div>
+
+</body>
+</html>
